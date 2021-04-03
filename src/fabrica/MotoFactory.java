@@ -6,15 +6,14 @@ import entidades.Suzuki;
 import entidades.Yamaha;
 
 public class MotoFactory {
-    public static Moto getMoto(String tipoMoto) {
-        if (tipoMoto =="Suzuki")
-            return new Suzuki();
-        else if (tipoMoto == "Yamaha")
-            return new Yamaha();
-        else if (tipoMoto=="Honda")
-        	return new Honda();
-        else 
-            return null;
-    }
+	public static Moto getMoto(String tipoMoto) {		
+		if (tipoMoto.equalsIgnoreCase("Suzuki")) {
+			return new Suzuki();			
+		} else if (tipoMoto.equalsIgnoreCase("Yamaha")) {
+			return new Yamaha();
+		} else if (tipoMoto.equalsIgnoreCase("Honda")) {
+			return new Honda();
+		} else
+			return null;
+	}
 }
-
